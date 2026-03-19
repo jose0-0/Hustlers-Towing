@@ -5,5 +5,6 @@ import About from "./About";
 import Services from "./Services";
 import Why from "./Why";
 import Reviews from "./Reviews";
+import Request from "./Request";
 
-export { Navbar, Hero, StatsStrip, About, Services, Why, Reviews };
+export { Navbar, Hero, StatsStrip, About, Services, Why, Reviews, Request };

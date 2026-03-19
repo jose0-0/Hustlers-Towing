@@ -33,10 +33,10 @@ const Navbar = () => {
         ))}
         <li>
           <a
-            href="tel:7029002013"
+            href="tel:702-123-4567"
             className="font-condensed text-[13px] font-bold tracking-[2px] uppercase text-site-black bg-gold px-5 py-2.5 rounded-sm no-underline hover:bg-gold-dark transition-colors"
           >
-            (702) 900-2013
+            (702) 123-4567
           </a>
         </li>
       </ul>

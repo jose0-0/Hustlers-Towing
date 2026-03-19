@@ -2,19 +2,28 @@ import Link from "next/link";
 import { TruckIcon, TrophyIcon } from "./Icons";
 
 const nav = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#request", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/reviews", label: "Reviews" },
+  { href: "/contact-us", label: "Contact" },
+  { href: "/articles", label: "Roadside Tips" },
 ];
 const svcs = [
-  "Light & Heavy Towing",
-  "Emergency Recovery",
-  "Roadside Assistance",
-  "Parking Enforcement",
-  "Fuel & Jump Starts",
+  { href: "/services/#light-duty-towing", label: "Light & Heavy Towing" },
+  { href: "/services/#emergency-recovery", label: "Emergency Recovery" },
+  { href: "/services/#tire-changes", label: "Roadside Assistance" },
+  { href: "/services/#parking-enforcement", label: "Parking Enforcement" },
+  { href: "/services/#fuel-delivery", label: "Fuel & Jump Starts" },
 ];
-const areas = ["Las Vegas", "Henderson", "North Las Vegas", "Summerlin"];
+const areas = [
+  "Las Vegas",
+  "North Las Vegas",
+  "Spring Valley",
+  "Southern Highlands",
+  "Henderson",
+  "Green Valley",
+  "Summerlin",
+];
 
 const Footer = () => {
   return (
@@ -68,12 +77,12 @@ const Footer = () => {
             </h4>
             <ul className="flex flex-col gap-2.5 list-none p-0 m-0">
               {svcs.map((s) => (
-                <li key={s}>
+                <li key={s.href}>
                   <Link
-                    href="#services"
+                    href={s.href}
                     className="text-sm text-muted no-underline hover:text-gold transition-colors"
                   >
-                    {s}
+                    {s.label}
                   </Link>
                 </li>
               ))}
@@ -89,7 +98,7 @@ const Footer = () => {
               {areas.map((a) => (
                 <li key={a}>
                   <Link
-                    href="#request"
+                    href="/"
                     className="text-sm text-muted no-underline hover:text-gold transition-colors"
                   >
                     {a}

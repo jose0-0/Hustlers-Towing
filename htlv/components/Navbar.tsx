@@ -40,10 +40,10 @@ const Navbar = () => {
             ))}
             <li>
               <a
-                href="tel:7029002013"
+                href="tel:7021234567"
                 className="font-condensed text-[13px] font-bold tracking-[2px] uppercase text-site-black bg-gold px-5 py-2.5 rounded-sm no-underline hover:bg-gold-dark transition-colors"
               >
-                (702) 900-2013
+                (702) 123-4567
               </a>
             </li>
           </ul>
@@ -51,7 +51,7 @@ const Navbar = () => {
           {/* Mobile: call button + hamburger — visible below 850px */}
           <div className="flex min-[850px]:hidden items-center gap-3">
             <a
-              href="tel:7029002013"
+              href="tel:7021234567"
               className="hidden font-condensed text-[13px] font-bold tracking-[1px] uppercase text-site-black bg-gold px-4 py-2 rounded-sm no-underline"
             >
               Call Now
@@ -94,10 +94,10 @@ const Navbar = () => {
             ))}
             <li className="pt-4 pb-2">
               <a
-                href="tel:7029002013"
+                href="tel:7021234567"
                 className="flex items-center justify-center font-condensed text-[15px] font-bold tracking-[2px] uppercase text-site-black bg-gold py-4 rounded-sm no-underline hover:bg-gold-dark transition-colors"
               >
-                (702) 900-2013
+                (702) 123-4567
               </a>
             </li>
           </ul>

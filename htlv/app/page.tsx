@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Hero, StatsStrip, About, Services } from "@/components";
+import { Hero, StatsStrip, About, Services, Why } from "@/components";
 
 export default function Home() {
   return (
@@ -8,6 +7,7 @@ export default function Home() {
       <StatsStrip />
       <About />
       <Services />
+      <Why />
     </>
   );
 }

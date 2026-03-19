@@ -12,7 +12,7 @@ const Hero = () => {
     <>
       <section
         id="hero"
-        className="relative min-h-screen flex items-center overflow-hidden pt-[120px] pb-20 px-10"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[120px] pb-20 px-10"
       >
         <div
           className="absolute inset-0"
@@ -23,7 +23,7 @@ const Hero = () => {
         />
         <div className="absolute inset-0 hero-stripe" />
 
-        <div className="relative z-10 max-w-[700px]">
+        <div className="relative z-10 flex flex-col items-center text-center max-w-[800px]">
           {/* Badge */}
           <div className="animate-fade-up inline-flex items-center gap-2 font-condensed text-xs font-bold tracking-[3px] uppercase text-gold border border-gold/30 px-4 py-1.5 rounded-sm mb-8">
             <span className="w-1.5 h-1.5 bg-gold rounded-full shrink-0" />
@@ -46,14 +46,14 @@ const Hero = () => {
           </h1>
 
           {/* Description */}
-          <p className="animate-fade-up delay-200 text-[17px] leading-relaxed text-[#aaa] max-w-[520px] mb-10">
+          <p className="animate-fade-up delay-200 text-[17px] leading-relaxed text-[#aaa] max-w-[560px] mb-10">
             All-in-one towing built for the Valley. Whether you need a quick
             jump start on the Strip or a long-haul recovery across Nevada, we
             hustle so you don&apos;t have to wait.
           </p>
 
           {/* Bullets */}
-          <div className="animate-fade-up delay-250 flex flex-wrap gap-3 mb-12">
+          <div className="animate-fade-up delay-250 flex flex-wrap justify-center gap-3 mb-12">
             {bullets.map((b) => (
               <span
                 key={b}
@@ -66,9 +66,9 @@ const Hero = () => {
           </div>
 
           {/* CTAs */}
-          <div className="animate-fade-up delay-300 flex flex-wrap gap-4">
+          <div className="animate-fade-up delay-300 flex flex-wrap justify-center gap-4">
             <a
-              href="tel:702-123-4567"
+              href="tel:7021234567"
               className="inline-flex items-center gap-2 font-condensed text-base font-bold tracking-[2px] uppercase text-site-black bg-gold px-10 py-[18px] rounded-sm no-underline hover:bg-gold-dark hover:-translate-y-px transition-all"
             >
               <PhoneIcon className="w-4 h-4 shrink-0" />
@@ -81,20 +81,6 @@ const Hero = () => {
               View Services
             </a>
           </div>
-        </div>
-
-        {/* Floating phone */}
-        <div className="animate-fade-up delay-400 absolute right-[6%] bottom-[12%] hidden lg:flex flex-col items-end gap-2 z-10">
-          <span className="flex items-center gap-1.5 font-condensed text-[11px] font-bold tracking-[3px] uppercase text-muted">
-            <span className="w-1.5 h-1.5 bg-[#3ddb7a] rounded-full animate-blink" />
-            Live Dispatch
-          </span>
-          <a
-            href="tel:702-123-4567"
-            className="font-bebas text-[54px] leading-none tracking-wide text-cream no-underline hover:text-gold transition-colors"
-          >
-            (702) 123-4567
-          </a>
         </div>
       </section>
     </>

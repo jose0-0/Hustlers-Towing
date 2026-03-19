@@ -14,13 +14,13 @@ const reasons = [
     title: "Transparent Pricing",
     desc: "No hidden fees, no surprises. You get a clear quote before we start — and the final bill matches it.",
   },
+  // {
+  //   num: "04",
+  //   title: "ACE Award Winner — Top 1%",
+  //   desc: "We've earned the Ace Award two years in a row, recognizing us among the top 1% of towing companies across the entire nation.",
+  // },
   {
     num: "04",
-    title: "ACE Award Winner — Top 1%",
-    desc: "We've earned the Ace Award two years in a row, recognizing us among the top 1% of towing companies across the entire nation.",
-  },
-  {
-    num: "05",
     title: "Local Las Vegas Expertise",
     desc: "Born and based in Las Vegas. We know every highway, back street, and hot zone — and we partner with the best local auto shops after the tow.",
   },

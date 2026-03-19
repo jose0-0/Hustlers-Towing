@@ -1,11 +1,11 @@
 import { TrophyIcon, MapPinIcon, BoltIcon, ShieldCheckIcon } from "./Icons";
 
 const highlights = [
-  {
-    icon: TrophyIcon,
-    title: "ACE Certified",
-    desc: "Top 1% nationwide, two years straight",
-  },
+  // {
+  //   icon: TrophyIcon,
+  //   title: "ACE Certified",
+  //   desc: "Top 1% nationwide, two years straight",
+  // },
   { icon: MapPinIcon, title: "LV", desc: "Full coverage across Las Vegas" },
   {
     icon: BoltIcon,

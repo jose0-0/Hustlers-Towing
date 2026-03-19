@@ -6,5 +6,16 @@ import Services from "./Services";
 import Why from "./Why";
 import Reviews from "./Reviews";
 import Request from "./Request";
+import Footer from "./Footer";
 
-export { Navbar, Hero, StatsStrip, About, Services, Why, Reviews, Request };
+export {
+  Navbar,
+  Hero,
+  StatsStrip,
+  About,
+  Services,
+  Why,
+  Reviews,
+  Request,
+  Footer,
+};

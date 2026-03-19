@@ -1,7 +1,5 @@
 const stats = [
   { num: "24/7", label: "Always\nOn Call" },
-  //   { num: "4.9", label: "Google\nRating" },
-  //   { num: "Top 1%", label: "ACE Award\nWinner" },
   { num: "LV", label: "CityWide\nCoverage" },
 ];
 const StatsStrip = () => {

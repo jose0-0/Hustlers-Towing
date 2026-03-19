@@ -1,11 +1,6 @@
 import { TrophyIcon, MapPinIcon, BoltIcon, ShieldCheckIcon } from "./Icons";
 
 const highlights = [
-  // {
-  //   icon: TrophyIcon,
-  //   title: "ACE Certified",
-  //   desc: "Top 1% nationwide, two years straight",
-  // },
   { icon: MapPinIcon, title: "LV", desc: "Full coverage across Las Vegas" },
   {
     icon: BoltIcon,
@@ -183,16 +178,6 @@ const About = () => {
               />
             </svg>
           </div>
-          {/* <div className="absolute -bottom-5 -right-5 w-[120px] h-[120px] bg-gold rounded-full flex flex-col items-center justify-center border-4 border-site-dark">
-            <span className="font-bebas text-[30px] text-site-black leading-none">
-              ACE
-            </span>
-            <span className="font-condensed text-[10px] font-bold tracking-[1px] text-black/65 uppercase text-center leading-[1.3]">
-              Award
-              <br />
-              Winner
-            </span>
-          </div> */}
         </div>
 
         {/* Text */}

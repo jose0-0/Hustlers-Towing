@@ -5,7 +5,7 @@ import { TruckIcon } from "./Icons";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "#reviews", label: "Reviews" },
   { href: "#request", label: "Contact" },
 ];

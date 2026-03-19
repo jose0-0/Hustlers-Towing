@@ -14,11 +14,6 @@ const reasons = [
     title: "Transparent Pricing",
     desc: "No hidden fees, no surprises. You get a clear quote before we start — and the final bill matches it.",
   },
-  // {
-  //   num: "04",
-  //   title: "ACE Award Winner — Top 1%",
-  //   desc: "We've earned the Ace Award two years in a row, recognizing us among the top 1% of towing companies across the entire nation.",
-  // },
   {
     num: "04",
     title: "Local Las Vegas Expertise",

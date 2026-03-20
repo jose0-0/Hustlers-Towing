@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TruckIcon, TrophyIcon } from "./Icons";
 
 const nav = [
@@ -33,8 +34,16 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 font-bebas text-[28px] tracking-[3px] text-cream mb-4">
-              <TruckIcon className="w-6 h-6 text-gold" />
-              Hustlers <span className="text-gold">Towing</span>
+              <Link href="/" className="flex items-center no-underline">
+                <Image
+                  src="/hustlers_towing_gold_stroke.webp"
+                  alt="Hustlers Towing Las Vegas"
+                  width={160}
+                  height={48}
+                  priority
+                  className="h-15 w-auto object-contain"
+                />
+              </Link>
             </div>
             <p className="text-sm text-muted leading-relaxed mb-5">
               Las Vegas&apos;s dependable towing company. Serving the entire Las

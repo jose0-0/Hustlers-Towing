@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { TruckIcon } from "./Icons";
+import Image from "next/image";
 
 const links = [
   { href: "#about", label: "About" },
@@ -18,16 +18,19 @@ const Navbar = () => {
         {/* Top bar */}
         <div className="flex items-center justify-between px-6 min-[850px]:px-10 h-[70px]">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2.5 font-bebas text-[24px] min-[850px]:text-[26px] tracking-[3px] text-cream no-underline"
-          >
-            <TruckIcon className="w-6 h-6 min-[850px]:w-7 min-[850px]:h-7 text-gold" />
-            Hustlers <span className="text-gold">Towing</span>
+          <Link href="/" className="flex items-center no-underline">
+            <Image
+              src="/hustlers_towing_gold_stroke.webp"
+              alt="Hustlers Towing Las Vegas"
+              width={160}
+              height={48}
+              priority
+              className="h-15 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop links — visible above 850px */}
-          <ul className="hidden min-[850px]:flex items-center gap-8 list-none m-0 p-0">
+          <ul className="hidden min-[860px]:flex items-center gap-8 list-none m-0 p-0">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
@@ -49,7 +52,7 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile: call button + hamburger — visible below 850px */}
-          <div className="flex min-[850px]:hidden items-center gap-3">
+          <div className="flex min-[860px]:hidden items-center gap-3">
             <a
               href="tel:7021234567"
               className="hidden font-condensed text-[13px] font-bold tracking-[1px] uppercase text-site-black bg-gold px-4 py-2 rounded-sm no-underline"
@@ -74,7 +77,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile drawer — hidden above 850px */}
+        {/* Mobile drawer */}
         <div
           className={`min-[850px]:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             open ? "max-h-[400px] border-t border-gold/20" : "max-h-0"

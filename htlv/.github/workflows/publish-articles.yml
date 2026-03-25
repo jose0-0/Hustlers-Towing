@@ -1,0 +1,48 @@
+name: Publish Scheduled Articles
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run publish script
+        run: node --experimental-vm-modules .github/scripts/publish-articles.js
+
+      - name: Commit if published
+        id: commit
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add content/blog/index.json
+          if git diff --staged --quiet; then
+            echo "published=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "chore: publish scheduled articles [skip ci]"
+            git push
+            echo "published=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Deploy if published
+        if: steps.commit.outputs.published == 'true'
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USERNAME }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          script: |
+            cd /var/www/hustlers-towing
+            git pull origin main
+            docker compose up -d --build
+            docker image prune -f
